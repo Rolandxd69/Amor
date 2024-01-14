@@ -1,0 +1,158 @@
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fffafa;
+    font-family: 'Quicksand', sans-serif; /* Cambiamos la fuente a Quicksand */
+    font-size: 20px;
+    overflow: hidden;   
+}
+
+#container {
+    position: relative;
+     z-index: 2;
+     max-width: 100%;
+    padding: 20px;
+    border: 2px solid #ff6699;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+
+@media only screen and (min-width: 600px) {
+    /* Estilos específicos para pantallas más grandes (ej. tablets) */
+    #container {
+        padding: 40px; /* Aumentamos el relleno para tablets */
+    }
+
+}
+@media only screen and (min-width: 900px) {
+    /* Estilos específicos para pantallas más grandes (ej. computadoras de escritorio) */
+    #container {
+        padding: 60px; /* Aumentamos el relleno para computadoras de escritorio */
+    }
+}
+#container:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Cambiamos la sombra al pasar el ratón */
+}
+
+h1 {
+    font-size: 40px;
+    color: #ff3366;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Añadimos una sombra al texto */
+}
+
+#mensaje {
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #333;
+    animation: fadeIn 2s ease-in-out, moveIn 1.5s ease-in-out, blink 3s infinite;;
+}
+
+form {
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#mensaje {
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #333;
+    animation: fadeIn 2s ease-in-out, moveIn 1.5s ease-in-out, blink 3s infinite; ; /* Añadimos otra animación al mensaje */
+}
+
+button {
+    padding: 20px 40px;
+    font-size: 28px;
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), translateY(0);  /* Añadimos una sombra al botón */
+    animation: scaleUp 1s ease-in-out, colorChange 2s infinite;
+}
+
+button:hover {
+    background-color: #e62957;
+}
+
+
+
+#mensajeSecreto {
+    font-style: italic;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+button.animated {
+    animation: rotate 1s ease-in-out, pulse 2s infinite; /* Añadimos una animación adicional cuando se muestra el mensaje */
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+@keyframes colorChange {
+    0% { background-color: #ff3366; }
+    50% { background-color: #e62957; }
+    100% { background-color: #ff3366; }
+}
+
+#corazon-secreto.heartBeat {
+    animation: heartBeat 1s infinite; /* Agregamos una animación al corazón */
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+#corazon,
+#corazon-secreto {
+    color: #ff3366; /* Color del corazón */
+    margin-left: 5px; /* Espacio entre el texto y el corazón */
+}
+
+
+.oculto {
+display: none;
+
+}
+  
+
+   
